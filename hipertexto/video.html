@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video en pantalla completa</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .video-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Esto hace que el contenedor ocupe toda la altura de la pantalla */
+            background-color: #000000; /* Color de fondo opcional */
+        }
+
+        .video-container iframe {
+            width: 1200px; /* Ancho del video */
+            height: 700px; /* Alto del video */
+        }
+
+        .button-34 {
+            display: none; /* Ocultar el botón inicialmente */
+            position: absolute;
+            bottom: 40vh;
+            right: 40%; /* Ajusta según sea necesario para la distancia desde la derecha */
+            background: #00028c;
+            border-radius: 999px;
+            box-shadow: #46035e 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: 'Public Sans', sans-serif;
+            font-size: 6vh;
+            font-weight: 700;
+            line-height: 7vh;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+            transition: background-color 0.5s ease;
+            text-decoration: none;
+        }
+
+        .button-34:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/q6FIqbuLKok?si=Vo9PYWeawRLTkVeq&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a id="continueButton" class="button-34" role="button" href="start.html">Continuar</a>
+    </div>
+
+    <script>
+        // Función para mostrar el botón después de 50 segundos
+        setTimeout(function() {
+            document.getElementById('continueButton').style.display = 'block';
+        }, 60000); // 50000 milisegundos = 50 segundos
+    </script>
+</body>
+</html>

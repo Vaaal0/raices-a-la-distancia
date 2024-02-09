@@ -1,0 +1,117 @@
+body{
+    background-image: url(https://github.com/Vaaal0/fotos-ra-ces/blob/main/cancha%203.jpg?raw=true);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen horizontalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura al 100% de la ventana visible */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos generales para los botones */
+.boton-container {
+    position: relative;
+}
+
+.boton1, .boton2, .boton3, .boton4{
+    position: fixed;
+    border-radius: 999px;
+    box-shadow: #03035e 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 5vh;
+    font-weight: 700;
+    line-height: 7vh;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+/* Estilos específicos para cada botón */
+.boton1 {
+    bottom: 7vh;
+    left: 30%;
+    background: #000000;
+}
+
+.boton2 {
+    bottom: 7vh;
+    left: 70%;
+    transform: translateX(-50%);
+    background: #000000;
+}
+
+
+/* Efectos al pasar el ratón */
+.boton1:hover {
+    background-color: #a11fa8;
+    color: #000;
+}
+
+.boton2:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200, 33%, 31%);
+    z-index: -1;
+    transition: transform .8s ease;
+ }
+  
+h1 {
+    position: relative;
+    font-size: 4vh;
+    color: #ffffff;
+
+}
+
+@media (orientation: landscape) {
+    body {
+        grid-auto-flow: column;
+    }
+}
+.h-container {
+    text-align: center; /* Center the text horizontally */
+    max-width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Adjust as needed for spacing */
+    border-radius: 10px; /* Adjust as needed for rounded corners */
+}

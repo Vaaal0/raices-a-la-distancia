@@ -1,0 +1,109 @@
+body{
+    background-image: url(https://github.com/Vaaal0/fotos-ra-ces/blob/main/velarias%202.jpg?raw=true);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen horizontalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura al 100% de la ventana visible */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+/* Estilos generales para los botones */
+.boton-container {
+    position: relative;
+}
+
+.boton1, .boton2, .boton3, .boton4{
+    position: fixed;
+    border-radius: 999px;
+    box-shadow: #03035e 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 5vh;
+    font-weight: 700;
+    line-height: 7vh;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+/* Estilos específicos para cada botón */
+.boton1 {
+    bottom: 7vh;
+    left: 10%;
+    background: #000000;
+}
+
+.boton2 {
+    bottom: 7vh;
+    left: 40%;
+    transform: translateX(-50%);
+    background: #000000;
+}
+
+.boton3 {
+    bottom: 7vh;
+    left: 60%;
+    background: #000000;
+}
+
+.boton4 {
+    bottom: 7vh;
+    right: 10%;
+    background: #000000;
+}
+
+/* Efectos al pasar el ratón */
+.boton1:hover {
+    background-color: #f14141;
+    color: #000;
+}
+
+.boton2:hover {
+    background-color: #f0d53f;
+    color: #000;
+}
+
+.boton3:hover {
+    background-color: #70d74d;
+    color: #000;
+}
+
+.boton4:hover {
+    background-color: #4db6d8;
+    color: #000000;
+}
+
+
+
+

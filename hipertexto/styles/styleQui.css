@@ -1,0 +1,85 @@
+body{
+    background-image: url(https://github.com/Vaaal0/fotos-ra-ces/blob/main/velarias.jpg?raw=true);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen horizontalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura al 100% de la ventana visible */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+}
+
+.h-container {
+    text-align: center; /* Center the text horizontally */
+    max-width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Adjust as needed for spacing */
+    border-radius: 10px; /* Adjust as needed for rounded corners */
+}
+
+.button-34 {
+    position: fixed;
+    bottom: 7vh;
+    right: 10%; /* Ajusta según sea necesario para la distancia desde la derecha */
+    background: #000000;
+    border-radius: 999px;
+    box-shadow: #03035e 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 6vh;
+    font-weight: 700;
+    line-height: 7vh;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+.button-34:hover{
+    background-color: #ffffff;
+    color: #000;
+}
+
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .8s ease;
+ }
+  
+h1 {
+    position: relative;
+    font-size: 4vh;
+
+}
+
+@media (orientation: landscape) {
+    body {
+        grid-auto-flow: column;
+    }
+}

@@ -1,0 +1,184 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    margin: 0;
+    padding: 0;
+    background: #8a3b3b;
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/8a/54/6b/8a546bfecc01c605c6f1803b499ad98b.jpg'); 
+}
+
+.splitrow__photo {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.splitrow__photo img {
+    width: 80%;
+    height: 80%;
+}
+
+.splitrow__text {
+    color: #000000;
+    font-size: 3.2vh;
+    padding-top: 10%;
+    margin-bottom: 30px; /* Añade un margen inferior para separar el contenido del contenedor de los iconos sociales */
+}
+
+.splitrow__content {
+    padding: 50px auto;
+    background-color: #deddee70;
+}
+
+@media (min-width: 768px) {
+    .splitrow__photo {
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        width: 50%;
+        height: 100vh; /* Ajusta la altura al 100% del viewport */
+        overflow: hidden;
+    }
+    .splitrow__photo img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover; /* Para que la imagen se ajuste completamente al contenedor */
+    }
+    .splitrow__text {
+        float: right;
+        width: 50%;
+    }
+    .splitrow__content {
+        padding: 50px;
+    }
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 20px; /* Ajusta según sea necesario para la distancia desde arriba */
+    left: 20px; /* Ajusta según sea necesario para la distancia desde la derecha */
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: tomato;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff; /* color del menú */
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px; /* Ajusta según sea necesario para la posición vertical */
+    padding: 50px;
+    padding-top: 125px;
+    background: #deddee; /* color cuando abre el menu */
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, -100%); /* Ajusta para que se desplace desde arriba y la izquierda */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+.social-icons-container {
+    position: absolute; /* Fija el contenedor de los iconos sociales en la pantalla */
+    bottom: 20px; /* Ajusta según sea necesario para la distancia desde abajo */
+    width: 50%; /* Ocupa todo el ancho de la pantalla */
+    right: 0vh;
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio disponible entre las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan (wrap) en pantallas más pequeñas */
+    z-index: 1; /* Asegura que los iconos sociales estén por encima del contenido */
+    margin-top: 4vh;
+    padding-top: 2vh;
+}
+
+.social-icon {
+    width: 40%; /* Ajusta el tamaño según sea necesario */
+    max-width: 150px; /* Establece un ancho máximo para evitar que las imágenes sean demasiado grandes */
+    height: auto; /* Hace que la imagen sea proporcional y responsiva */
+    margin-bottom: 1em; /* Añade un espacio entre las imágenes para mejorar la apariencia en dispositivos más pequeños */
+}
+
+/* Reglas de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 40%; /* Redefine el ancho de las imágenes para pantallas más pequeñas */
+    }
+}
+
+/* Reglas de medios para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .social-icon {
+        width: 80%; /* Redefine el ancho de las imágenes para pantallas muy pequeñas */
+    }
+}
+
