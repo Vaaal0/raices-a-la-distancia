@@ -1,0 +1,110 @@
+body {
+    background: repeating-linear-gradient(45deg, #cbffd0, #cbffcd 10px, #7dec7d 10px, #61ff90 20px); /* Patrón de fondo */
+    animation: moveBackground 10s linear infinite; /* Animación de movimiento */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Rubik Vinyl', system-ui;
+    background-size: 200% 200%; /* Dimensiones del fondo animado */
+    position: relative;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#fake-image-section {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrar el contenedor en la pantalla */
+    overflow: hidden; /* Ocultar el contenido que sobresale del contenedor */
+
+    /* Estilos adicionales para un efecto de marco */
+
+    border-radius: 10px;
+    position: absolute;
+}
+
+#fake-image {
+    width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    transform: rotate(-5deg); /* Girar la imagen ligeramente para un efecto desalineado */
+    filter: brightness(90%) contrast(90%) grayscale(10%); /* Aplicar un filtro para desgastar la imagen */
+}
+
+#fake-button {
+    background-color: #00ddff; /* Color de fondo llamativo */
+    color: #fff; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 10px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+
+    /* Estilos adicionales para hacerlo más llamativo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: calc(2/4 * 100vh + 2.5cm); /* 2/3 desde arriba + 1.5 cm */
+    right: calc(2/5 * 100vw); /* 1/4 desde la derecha */
+    font-size: 160%; /* Aumenta el tamaño del texto en un 20% */
+}
+
+#fake-button:hover {
+    background-color: #000000; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+#center-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00ff40;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Archivo Black', sans-serif;
+    animation: moveButton 2s ease-in-out infinite alternate; /* Animación de movimiento */
+}
+
+#center-container a:hover {
+    background-color: #091015;
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+.container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.icon-button {
+    background-color: transparent; /* Color de fondo transparente */
+    color: #3498db; /* Color del icono */
+    border: none;
+    padding: 15px; /* Aumenta el espacio interno del botón */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon-button img {
+    width: 40px; /* Aumenta el tamaño del icono */
+    height: 40px; /* Aumenta el tamaño del icono */
+    margin-right: 5px;
+}
